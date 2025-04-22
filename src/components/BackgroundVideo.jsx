@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Navbar from './components/Navbar';
+import Navbar from '/src/components/Navbar';
 
 export default function HeroSection({ children }) {
     return (
