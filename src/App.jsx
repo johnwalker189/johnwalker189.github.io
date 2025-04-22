@@ -5,11 +5,11 @@ function App() {
   return (
     <>
       <Navbar />
-      <HeroSection>
+      {/*<HeroSection>
         <h1 className="text-lg font-bold text-center mx-auto max-w-3xl text-white animate-pulse">
           Welcome to my stupid place~
         </h1>
-      </HeroSection>
+      </HeroSection>*/}
     </>
   );
 }
