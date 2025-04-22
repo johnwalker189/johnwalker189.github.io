@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './components/Navbar';
 import HeroSection from './components/BackgroundVideo';
+import bgVideo from '/src/assets/background.mp4';
 
 function App() {
   return (
