@@ -3,31 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Walker's Portfolio</title>
+    <title>Video Background</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <!-- Video Background -->
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="background.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Content on top of video -->
+    <div class="content">
         <h1>Welcome to My Portfolio</h1>
-    </header>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm John Walker, a web developer passionate about creating beautiful and functional websites.</p>
-    </section>
-
-    <section id="projects">
-        <h2>My Projects</h2>
-        <ul>
-            <li><a href="#">Project 1</a></li>
-            <li><a href="#">Project 2</a></li>
-        </ul>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 John Walker</p>
-    </footer>
-
-    <script src="script.js"></script>
+        <p>This is a cool video background!</p>
+    </div>
 </body>
 </html>
