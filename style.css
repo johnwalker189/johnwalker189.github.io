@@ -1,42 +1,125 @@
-/* Reset some default styles */
+/* Đặt lại các margin, padding mặc định */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Basic styles for body */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Header styles */
-header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Section styles */
-section {
-    padding: 20px;
-    margin: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Footer styles */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
+/* Video nền chiếm toàn màn hình */
+.video-container {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    bottom: 0;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
 }
+
+/* Đảm bảo video phủ toàn màn hình */
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Lớp mờ giữa video và nội dung */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Độ mờ 50% */
+    z-index: -1;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Nền đen mờ */
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto', 'Noto Sans', sans-serif;
+    margin: 0 20px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #FF5733; /* Màu chuyển khi hover */
+}
+
+/* Nội dung hiển thị trên video */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Màu chữ trắng */
+    text-align: center;
+    font-family: 'Roboto', 'Noto Sans', sans-serif; /* Font Google */
+}
+
+/* Hiệu ứng chữ đẹp */
+.content h1 {
+    font-size: 2.5rem; /* Cỡ chữ nhỏ hơn */
+    font-weight: bold;
+    color: white; /* Màu chữ trắng */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);  /* Thêm bóng đổ cho chữ */
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* Animation chữ gợn sóng cho từng chữ cái */
+.content h1 span {
+    display: inline-block;
+    animation: wave 1.5s ease-in-out infinite, color-change 2s infinite;
+    animation-delay: var(--delay);
+}
+
+/* Animation chữ gợn sóng */
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0); /* Vị trí ban đầu và kết thúc */
+    }
+    50% {
+        transform: translateY(-15px); /* Di chuyển lên trên khi đạt giữa chu kỳ */
+    }
+}
+
+/* Animation thay đổi màu sắc ngẫu nhiên */
+@keyframes color-change {
+    0% {
+        color: #FF5733; /* Màu đỏ */
+    }
+    25% {
+        color: #33FF57; /* Màu xanh lá */
+    }
+    50% {
+        color: #3357FF; /* Màu xanh dương */
+    }
+    75% {
+        color: #FF33A1; /* Màu hồng */
+    }
+    100% {
+        color: #FF5733; /* Màu đỏ */
+    }
+}
+
+/* Thêm phần font từ Google */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap');

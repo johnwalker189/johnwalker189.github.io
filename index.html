@@ -3,21 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Background</title>
+    <title>Welcome</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <div></div> <!-- Space filler -->
+        <div>
+            <a href="#">About</a>
+            <a href="#">Repo</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
     <!-- Video Background -->
     <div class="video-container">
-        <video autoplay muted loop id="background-video">
+        <video id="background-video" autoplay loop muted>
             <source src="background.mp4" type="video/mp4">
         </video>
+        <div class="video-overlay"></div>
     </div>
 
-    <!-- Content on top of video -->
+    <!-- Content with animated text -->
     <div class="content">
-        <h1>Welcome to My Portfolio</h1>
-        <p>This is a cool video background!</p>
+        <h1>
+            welcome to my stupid place ~
+        </h1>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
