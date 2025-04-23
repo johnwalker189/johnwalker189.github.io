@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import HeroSection from '/src/components/BackgroundVideo';
-import bgVideo from '/src/assets/background.mp4';
+
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 

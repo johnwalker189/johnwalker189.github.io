@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import Navbar from '/src/components/Navbar';
-import bgVideo from '/src/assets/background.mp4';
 
 export default function HeroSection({ children }) {
     return (
@@ -12,7 +10,7 @@ export default function HeroSection({ children }) {
           playsInline
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
         >
-          <source src={bgVideo} type="video/mp4" />
+          <source src={`${process.env.PUBLIC_URL}/assets/background.mp4`} type="video/mp4" />
         </video>
   
         <div className="absolute top-0 left-0 w-full h-full bg-black/40 z-10" />
